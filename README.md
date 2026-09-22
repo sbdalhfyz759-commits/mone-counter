@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>عداد القروش - عبد الحفيظ صلاح</title>
+<style>
+body{font-family:sans-serif;background:#111;color:#fff;text-align:center;padding:20px}
+input,button{padding:15px;font-size:18px;margin:5px;border-radius:10px;border:none;width:90%}
+button{background:#25D366;color:#000;font-weight:bold}
+#result{font-size:30px;margin-top:20px;color:#25D366;font-weight:bold}
+</style>
+</head>
+<body>
+<h1>عداد القروش 💰</h1>
+<p>بواسطة عبد الحفيظ صلاح</p>
+<input id="num" type="number" placeholder="اكتب عدد القروش هنا">
+<button onclick="calc()">احسب الآن</button>
+<div id="result"></div>
+<script>
+function calc(){
+let n=document.getElementById('num').value;
+if(n==""){document.getElementById('result').innerHTML="اكتب رقم أول"; return;}
+document.getElementById('result').innerHTML = n + " جنيه = " + (n/1000) + " ألف جنيه";
+}
+</script>
+</body>
+</html>
